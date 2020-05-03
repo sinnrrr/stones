@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Oxanium:400,500,600,700,800&display=swap');
+
+html, body {
+    height: 100% !important;
+    width: 100% !important;
+    overflow: hidden;
+    margin: 0;
+}
+
+body > * {
+    visibility: hidden;
+    font-family: 'Oxanium', cursive;
+}
+
+button {
+    cursor: pointer;
+}
+
+button#play {
+    height: 30%;
+    width: 50%;
+    font-size: 10vw;
+    font-weight: 800;
+    border-radius: 30px;
+    background-color: black;
+    min-height: 300px;
+    color: wheat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border: 0;
+    outline: 0;
+    transition: 500ms;
+}
+
+button#play:hover {
+    background-color: wheat;
+    color: black;
+}
+
+div.dataEnter {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+label {
+    font-size: 48px;
+    font-weight: 800;
+    margin: 15px;
+}
+
+input {
+    padding: 10px 10px 10px 15px;
+    border-radius: 5px;
+    background-color: black;
+    font-size: 28px;
+    font-weight: 700;
+    color: wheat;
+    border: none;
+    outline: none;
+    text-align: left;
+    transition: 500ms;
+}
+
+input:not(:placeholder-shown) {
+    background-color: wheat;
+    color: black;
+}
+
+input:not(:placeholder-shown) ~ button.proceed {
+    visibility: visible;
+}
+
+h3 {
+    visibility: hidden;
+}
+
+button.proceed {
+    visibility: hidden;
+    position: absolute;
+    background-color: black;
+    color: wheat;
+    width: 150px;
+    right: 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 28px;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-top: 43px;
+    transition: 100ms;
+}
+
+span.message {
+    visibility: hidden;
+    margin-top: 5px;
+    color: red;
+}
+
+div.gameField {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+div.playerField{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    transition: 1s;
+}
+
+div#player1 {
+    color: black;
+    background-color: wheat;
+}
+
+div#player2 {
+    color: wheat;
+    background-color: black;
+}
+
+h1.playerName{
+    transition: 1s;
+    font-size: 8vw;
+    margin: 0;
+}
+
+h1#playerNameLabel1 {
+    border-bottom: 5px solid black;
+}
+
+h1#playerNameLabel2 {
+    border-bottom: 5px solid wheat;
+}
+
+div.buttonsCentering {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+button.take {
+    cursor: grab;
+    height: 20%;
+    width: 60%;
+    padding: 0 15px;
+    outline: none;
+    border: 0;
+    border-radius: 15px;
+    font-size: 5vw;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+button.take:nth-child(2){
+    margin: 15px 0;
+}
+
+div#player1 > div > button.take {
+    border: 3px solid black;
+    color: black;
+}
+
+div#player1 > div > button.take:hover, div#player1 > div > button.take:focus, div#player1 > div > button.take:active {
+    background-color: black;
+    color: wheat;
+}
+
+div#player2 > div > button.take {
+    border: 3px solid wheat;
+    color: wheat;
+}
+
+div#player2 > div > button.take:hover, div#player2 > div > button.take:focus, div#player2 > div > button.take:active {
+    background-color: wheat;
+    color: black;
+}
+
+div#stones {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 10%;
+    min-height: 50px;
+}
+
+div.stone {
+    height: 50px;
+    width: 50px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 15px 0;
+}
+
+.active {
+    max-height: 100% !important;
+    width: 60% !important;
+}
+
+.disabled {
+    height: 100% !important;
+    width: 40% !important;
+    min-height: 120px;
+}
+
+.won {
+    position: fixed;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+h1.wonName {
+    font-size: 20vw;
+}
+
+span.wonLabel {
+    font-size: 15vw;
+    font-weight: 800;
+}
+
+.forPlayer1 {
+    color: black;
+}
+
+.forPlayer2 {
+    color: wheat;
+}
+
+
+
+@media screen and (max-width: 768px){
+    .active {
+        height: 70% !important;
+        width: 100% !important;
+    }
+
+    .disabled {
+        height: 20% !important;
+        width: 100% !important;
+    }
+
+    button.proceed {
+        margin-top: 32px;
+    }
+
+    div.gameField {
+        flex-direction: column;
+    }
+
+    button.take:first-child {
+        margin-top: 15px;
+    }
+
+    div#stones {
+        width: 100%;
+        height: 10%;
+        flex-direction: row;
+    }
+
+    div.stone {
+        height: 25px;
+        width: 25px;
+        margin: 0 3px;
+    }
+
+    h1.playerName {
+        margin-top: 3px;
+    }
+
+    div.playerField {
+        width: 100%;
+        height: 50%;
+    }
+
+    label {
+        font-size: 32px;
+    }
+}

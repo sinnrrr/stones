@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <!--    <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">-->
+    <title>Game</title>
+</head>
+<body>
+<button id="play">Play!</button>
+<div id="playerData1" class="dataEnter">
+    <label for="playerName1">Enter player's 1 name:</label>
+    <input type="text" id="playerName1" placeholder="Enter name here" autofocus>
+    <button id="proceed1" class="proceed">Proceed</button>
+    <span id="message1" class="message"></span>
+</div>
+<div id="playerData2" class="dataEnter">
+    <label for="playerName2">Enter player's 2 name:</label>
+    <input type="text" id="playerName2" placeholder="Enter name here" autofocus>
+    <button id="proceed2" class="proceed">Proceed</button>
+    <span id="message2" class="message"></span>
+</div>
+<div id="game" class="gameField">
+    <div id="player1" class="playerField">
+        <h1 class="playerName" id="playerNameLabel1">Player 1</h1>
+        <h3 id="playerMessage1">Wait for the other player to grab the stone</h3>
+        <div id="playerTakeButtons1" class="buttonsCentering">
+            <button class="take" data-player="1" data-value="1">Take 1</button>
+            <button class="take" data-player="1" data-value="2">Take 2</button>
+            <button class="take" data-player="1" data-value="3">Take 3</button>
+            <h2>Time to grab some stones</h2>
+        </div>
+    </div>
+    <div id="stones">
+
+    </div>
+    <div id="player2" class="playerField">
+        <h1 class="playerName" id="playerNameLabel2">Player 2</h1>
+        <h3 id="playerMessage2">Wait for the other player to grab the stone</h3>
+        <div id="playerTakeButtons2" class="buttonsCentering">
+            <button class="take" data-player="2" data-value="1">Take 1</button>
+            <button class="take" data-player="2" data-value="2">Take 2</button>
+            <button class="take" data-player="2" data-value="3">Take 3</button>
+            <h2>Time to grab some stones</h2>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
